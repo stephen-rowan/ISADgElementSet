@@ -1,11 +1,11 @@
-PBCore Element Set (plugin for Omeka)
+ISAD(G) Element Set (plugin for Omeka)
 =====================================
 
 
 Summary
 -------
 
-This plugin creates an element set and an output format for the PBCore standard.
+This plugin creates an element set and an output format for the ISAD(G) standard.
 
 [PBCore][1] means "Public Broadcasting Metadata Dictionary". It's an xml format
 dedicated to digital public broadcasting and built on Dublin Core.
