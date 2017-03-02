@@ -7,11 +7,7 @@ Summary
 
 This plugin creates an element set and an output format for the ISAD(G) standard.
 
-[PBCore][1] means "Public Broadcasting Metadata Dictionary". It's an xml format
-dedicated to digital public broadcasting and built on Dublin Core.
-
-**Note**: PBCore standard is not totally implemented: only items useful for
-Omeka are added.
+It is based upon the [Pop Up Archive] PBCore ElementSet Plugin https://github.com/popuparchive/PBCoreElementSet
 
 For more information on Omeka, see [Omeka][2].
 
@@ -19,7 +15,7 @@ For more information on Omeka, see [Omeka][2].
 Installation
 ------------
 
-Uncompress files and rename plugin folder "PBCoreElementSet".
+Uncompress files and rename plugin folder "xxxx".
 
 Then install it like any other Omeka plugin. The plugin has no configuration.
 
@@ -65,10 +61,8 @@ Contact
 
 Current maintainers:
 
-* [Anne Wootton][5]
-* [Daniel Berthereau][6]
+xxx
 
-First version of this plugin has been built for [Pop Up Archive][7].
 
 
 Copyright
