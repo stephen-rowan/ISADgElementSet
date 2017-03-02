@@ -114,7 +114,7 @@ $elementSetMetadata = array(
 		array(
 			'label' => 'ISAD-G size/dimensions', 
 			'name'  => 'ISAD-G size/dimensions',
-			'description'	=> 'Provides a timestamp for the overall length or duration of the audio. Represents the playback time. Format: HH:MM:SS',
+			'description'	=> 'ISAD-G size/dimensions - no equivalent in Dublin Core. Needs to be added to all item types.',
 			'data_type'   => 'Tiny Text',
 		),
 	//ISAD-G Collection Administrative and biographical history - - collection level element.
