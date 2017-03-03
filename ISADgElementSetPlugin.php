@@ -116,7 +116,7 @@ class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
             $text = WEB_ROOT . '/items/show/' . $item->id;
 
             // Check if this url already exists as an identifier.
-            $elementTexts = metadata($item, array('PBCore', 'Identifier'), array('all' => true, 'no_escape', 'no_filter'));
+            $elementTexts = metadata($item, array('ISAD-G', 'Identifier'), array('all' => true, 'no_escape', 'no_filter'));
             if (!in_array($text, $elementTexts)) {
                 //// We use direct sql to avoid some problems with this update, in
                 //// particular when there are attached files.
@@ -127,7 +127,7 @@ class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
                 // update_item($item, array(), $elementTexts);
                 static $elementId;
                 if (!$elementId) {
-                    $elementId = $this->_db->getTable('Element')->findByElementSetNameAndElementName('PBCore', 'Identifier')->id;
+                    $elementId = $this->_db->getTable('Element')->findByElementSetNameAndElementName('ISAD-G', 'Identifier')->id;
                 }
                 $sql = "
                     INSERT INTO {$this->_db->ElementText} (record_id, record_type, element_id, html, text)
