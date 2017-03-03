@@ -1,18 +1,17 @@
 <?php
 /**
- * PBCore Element Set plugin
+ * ISAD-G Element Set Plugin
  *
- * Creates element set for PBCore (Public Broadcasting Metadata Dictionary), a
- * standard for digitalized documents (see http://pbcore.org).
+ * Creates element set for ISAD-G (General International Standard Archival Description) 
+ * defines the elements that should be included in an archival finding aid.
  *
- * @copyright Pop Up Archive, 2012
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
  * @package PBCore-Element-Set
  **/
 
 class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
 {
-    private $_elementSetName = 'PBCore';
+    private $_elementSetName = 'ISAD-G';
 
     /**
      * @var array Hooks for the plugin.
