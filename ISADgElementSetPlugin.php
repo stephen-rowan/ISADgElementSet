@@ -195,4 +195,42 @@ class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
             $elementSet->delete();
         }
     }
+
+//Experimental Admin Form
+
+    protected function _getForm($record)
+    {
+
+    $formOptions = array('type' => 'item', 'hasPublicPage'=>true);
+        if($record && $record->exists()) {
+	        $formOptions['record'] = $record;
+		    }
+
+    $form = new Omeka_Form_Admin($formOptions);
+
+// build the form elements
+
+$form->addElementToSaveGroup('checkbox', 'is_published',
+			array('id' => 'my_plugin_is_published',
+				'values' => array(1, 0),
+				'checked' => metadata($record, 'is_published'),
+				'label' => 'Publish this page?',
+				'description' => 'Checking this box will make the page public.'
+				  ));
+
+$form->addElement('textarea', 'description', array(
+    'label' => __('Description'),
+        'description' => __('My record description'),
+	    'rows' => 10
+	    ));
+
+
+//
+
+    return $form;
+    }
+
+//
+
+
 }
