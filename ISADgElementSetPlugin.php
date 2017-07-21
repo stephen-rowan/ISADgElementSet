@@ -1,8 +1,8 @@
 <?php
 /**
- * GATE Element Set Plugin
+ * Leeds-GATE element set Plugin
  *
- * Creates element set for GATE (General International Standard Archival Description) 
+ * Creates element set for Leeds-GATE based on ISAD(G) (General International Standard Archival Description) 
  * defines the elements that should be included in an archival finding aid.
  *
  * @license http://www.gnu.org/licenses/gpl-3.0.txt
@@ -11,7 +11,7 @@
 
 class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
 {
-    private $_elementSetName = 'GATE';
+    private $_elementSetName = 'Leeds-GATE element set';
 
     /**
      * @var array Hooks for the plugin.
@@ -116,7 +116,7 @@ class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
             $text = WEB_ROOT . '/items/show/' . $item->id;
 
             // Check if this url already exists as an identifier.
-            $elementTexts = metadata($item, array('GATE', 'Identifier'), array('all' => true, 'no_escape', 'no_filter'));
+            $elementTexts = metadata($item, array('Leeds-GATE element set', 'Identifier'), array('all' => true, 'no_escape', 'no_filter'));
             if (!in_array($text, $elementTexts)) {
                 //// We use direct sql to avoid some problems with this update, in
                 //// particular when there are attached files.
@@ -127,7 +127,7 @@ class ISADgElementSetPlugin extends Omeka_Plugin_AbstractPlugin
                 // update_item($item, array(), $elementTexts);
                 static $elementId;
                 if (!$elementId) {
-                    $elementId = $this->_db->getTable('Element')->findByElementSetNameAndElementName('GATE', 'Identifier')->id;
+                    $elementId = $this->_db->getTable('Element')->findByElementSetNameAndElementName('Leeds-GATE element set', 'Identifier')->id;
                 }
                 $sql = "
                     INSERT INTO {$this->_db->ElementText} (record_id, record_type, element_id, html, text)
